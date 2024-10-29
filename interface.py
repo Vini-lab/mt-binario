@@ -8,31 +8,27 @@ class TmInterfaz:
         self.root.geometry("450x350")
         self.root.configure(bg="#f5f5f5")
 
-        # Título estilizado
         self.title_label = tk.Label(
             root, text="Máquina de Turing", font=("Arial", 24, "bold"), bg="#f5f5f5", fg="#34495e"
         )
         self.title_label.pack(pady=20)
 
-        # Instrucciones de entrada
         self.label = tk.Label(
             root, text="Escribe la cadena que se analizará:",
             font=("Arial", 12), bg="#f5f5f5", fg="#34495e"
         )
         self.label.pack(pady=10)
 
-        # Campo de entrada con borde y diseño más moderno
         self.entry = tk.Entry(root, font=("Arial", 12), bg="#ecf0f1", fg="#34495e", bd=2, relief="groove")
         self.entry.pack(pady=10, ipadx=5, ipady=5)
 
-        # Botón estilizado
         self.verify_button = tk.Button(
             root, text="Verificar", font=("Arial", 12, "bold"), bg="#3498db", fg="white",
             relief="flat", padx=10, pady=5, borderwidth=1, command=self.verify_string
         )
         self.verify_button.pack(pady=20)
 
-        # Etiqueta de resultado
+
         self.result_label = tk.Label(
             root, text="", font=("Arial", 12), bg="#f5f5f5", fg="#34495e"
         )
@@ -64,13 +60,11 @@ class TmInterfaz:
         popup.geometry("350x200")
         popup.configure(bg="#f7f9f9")
 
-        # Mensaje en el popup
         label = tk.Label(
             popup, text=message, font=("Arial", 12, "bold"), bg="#f7f9f9", fg=color, wraplength=300
         )
         label.pack(pady=20)
 
-        # Botón de cierre estilizado
         close_button = tk.Button(
             popup, text="Cerrar", font=("Arial", 12, "bold"), bg="#3498db", fg="white",
             relief="flat", padx=10, pady=5, borderwidth=1, command=popup.destroy
